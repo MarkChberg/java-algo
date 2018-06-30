@@ -1,6 +1,6 @@
 package basic2;
 
-// 双向双端链表
+// 双向双端链表（双向表示Node除了next指针外还拥有prev指针，双端表示会引用最后一个node）
 public class BiLinkedNode extends LinkedNode<Integer> {
 
     @Override
