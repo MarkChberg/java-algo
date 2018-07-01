@@ -14,5 +14,12 @@ public class TestTree {
 
         TreeNode<Integer> node = bt.findNode(8);
         System.out.println(node);
+
+
+        bt.frontOrder(bt.root);
+        System.out.println();
+        bt.midOrder(bt.root); // 中序遍历会顺序输出，对排序有效
+        System.out.println();
+        bt.lastOrder(bt.root);
     }
 }

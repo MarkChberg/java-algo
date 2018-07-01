@@ -41,4 +41,37 @@ public class BinaryTree<T extends Comparable<T>> {
         }
         return current;
     }
+
+
+    public void frontOrder(TreeNode<T> root) { // 递归两大难点，一是总结出变量，而是判断弹出条件（if）
+        TreeNode<T> current = root;
+        if(current != null) {
+            System.out.print(root.data + " ");
+            // left
+            frontOrder(root.left);
+            // right
+            frontOrder(root.right);
+        }
+    }
+
+    public void midOrder(TreeNode<T> root) {
+        if(root != null) {
+            // left
+            midOrder(root.left);
+            System.out.print(root.data + " ");
+            // right
+            midOrder(root.right);
+        }
+    }
+
+
+    public void lastOrder(TreeNode<T> root) {
+        if (root != null) {
+            //left
+            lastOrder(root.left);
+            //right
+            lastOrder(root.right);
+            System.out.print(root.data + " ");
+        }
+    }
 }
